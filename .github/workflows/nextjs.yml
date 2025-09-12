@@ -34,6 +34,10 @@ jobs:
           version: 9
           run_install: false
 
+      # Fallback to ensure pnpm is on PATH even if the setup action is skipped
+      - name: Install pnpm globally (fallback)
+        run: npm i -g pnpm@9
+
       - name: Restore Next cache
         uses: actions/cache@v4
         with:
@@ -44,8 +48,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+        # If you don't have pnpm-lock.yaml committed, use:
+        # run: pnpm install --no-frozen-lockfile
 
-      # Optional helper that auto-injects basePath/unoptimized images if you didn't set them yourself
       - name: Configure Pages (Next)
         uses: actions/configure-pages@v5
         with:
