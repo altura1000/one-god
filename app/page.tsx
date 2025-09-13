@@ -5,6 +5,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } from "lucide-react"
 
+/*
+"scripts": { "build": "next build", "dev": "next dev", "lint": "next lint", "start": "next start" },
+
+
+
+*/
+
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
@@ -47,11 +55,14 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/10">
-        <div className="absolute inset-0 bg-[url('/interfaith-unity-with-rabbi.jpg')] bg-cover bg-center opacity-10"></div>
+      {/*
+       */}
+
+       <div className="absolute inset-0 bg-[url('/rabbie.png')] bg-cover bg-center opacity-45"></div>
         <div className="relative container py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <Badge variant="secondary" className="text-sm font-medium px-4 py-2">
-              One God, One Purpose, United Since 2020
+              One God, One Purpose, United Since 2025
             </Badge>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight">
               <span className="text-primary">One God</span>, One Voice.
@@ -59,7 +70,7 @@ export default function HomePage() {
               United for <span className="text-accent">Freedom</span>.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground text-balance max-w-3xl mx-auto leading-relaxed">
-              Jews, Christians, and Muslims united under One God, defending our shared values of freedom, democracy, and
+              Jews and Christians united under One God, defending our shared values of freedom, democracy, and
               human dignity. Together, we stand against extremist threats that seek to divide our communities and
               undermine our way of life.
             </p>
@@ -90,7 +101,7 @@ export default function HomePage() {
             <div className="text-center space-y-6 mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Our Sacred Mission Under One God</h2>
               <p className="text-xl text-muted-foreground text-balance">
-                Rooted in our common Abrahamic heritage, Jews, Christians, and Muslims unite to protect the pillars of
+                 Jews and Christians unite to protect the pillars of
                 democracy and human dignity against those who seek to destroy our communities through hatred and
                 extremism.
               </p>
@@ -106,7 +117,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-base leading-relaxed">
-                    Protecting synagogues, churches, and mosques from extremist attacks while safeguarding our
+                    Protecting synagogues and churches from extremist attacks while safeguarding our
                     fundamental right to worship the One God freely and safely.
                   </CardDescription>
                 </CardContent>
@@ -136,9 +147,8 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-base leading-relaxed">
-                    Building bridges between Jewish, Christian, and Muslim communities to counter antisemitism,
-                    Islamophobia, religious persecution, and radical ideologies threatening our shared Abrahamic
-                    heritage.
+                    Building bridges between Jewish and Christian communities to counter antisemitism,
+                    religious persecution, and radical ideologies.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -154,8 +164,8 @@ export default function HomePage() {
             <div className="text-center space-y-6 mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Latest Updates</h2>
               <p className="text-xl text-muted-foreground text-balance">
-                Stay informed about our interfaith efforts and global solidarity initiatives across Jewish, Christian,
-                and Muslim communities.
+                Stay informed about our interfaith efforts and global solidarity initiatives across Jewish and Christian
+                
               </p>
             </div>
 
@@ -172,7 +182,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
-                    Jewish, Christian, and Muslim leaders join together in prayer for peace and protection against
+                    Jewish and Christian leaders join together in prayer for peace and protection against
                     rising antisemitism, Islamophobia, and religious persecution worldwide.
                   </CardDescription>
                 </CardContent>
@@ -190,7 +200,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
-                    Local Jewish, Christian, and Muslim congregations collaborate on security measures and mutual
+                    Local Jewish and Christian congregations collaborate on security measures and mutual
                     support programs to protect against extremist threats and build lasting friendships.
                   </CardDescription>
                 </CardContent>
@@ -206,7 +216,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
-                    Young Jewish, Christian, and Muslim leaders unite to combat hate speech and build bridges between
+                    Young Jewish and Christian leaders unite to combat hate speech and build bridges between
                     communities in 12 countries, emphasizing our shared heritage under One God.
                   </CardDescription>
                 </CardContent>
@@ -223,7 +233,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Stand With Us Under One God</h2>
               <p className="text-xl text-muted-foreground text-balance">
-                Whether Jewish, Christian, or Muslim, your voice strengthens our shared commitment to freedom and
+                Whether Jewish or Christian, your voice strengthens our shared commitment to freedom and
                 democracy. United under One God, we are unstoppable.
               </p>
             </div>
@@ -297,7 +307,7 @@ export default function HomePage() {
             <div className="text-center space-y-6 mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Join Our Interfaith Alliance</h2>
               <p className="text-xl text-muted-foreground text-balance">
-                Ready to stand together? Connect with fellow believers from Jewish, Christian, and Muslim communities
+                Ready to stand together? Connect with fellow believers from Jewish and Christian.
                 committed to defending our shared values under One God.
               </p>
             </div>
@@ -329,7 +339,7 @@ export default function HomePage() {
                 <div className="p-6 bg-muted/50 rounded-lg">
                   <h3 className="font-semibold text-lg mb-3">Community Safety Hotline</h3>
                   <p className="text-muted-foreground mb-4">
-                    If your synagogue, church, mosque, or community is facing threats or harassment, contact our 24/7
+                    If your synagogue or church community is facing threats or harassment, contact our 24/7
                     interfaith response team for immediate support and resources.
                   </p>
                   <Button
@@ -398,7 +408,7 @@ export default function HomePage() {
                   <span className="font-bold text-lg">Unity Alliance</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Jews, Christians, and Muslims united under One God, defending our shared heritage of freedom,
+                  Jews and Christians united under One God, defending our shared heritage of freedom,
                   democracy, and human dignity against all forms of extremism.
                 </p>
               </div>
@@ -468,7 +478,7 @@ export default function HomePage() {
 
             <div className="border-t mt-8 pt-8 text-center">
               <p className="text-sm text-muted-foreground">
-                © 2024 Unity Alliance. All rights reserved. One God, one purpose, united since 2020.
+                © 2024 Unity Alliance. All rights reserved. One God, one purpose, united since 2025.
               </p>
             </div>
           </div>
