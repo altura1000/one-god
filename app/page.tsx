@@ -178,7 +178,11 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="hover:shadow-lg transition-shadow">
-                <div className="aspect-video bg-muted rounded-t-lg bg-[url('/three-faith-prayer-unity.png')] bg-cover bg-center"></div>
+                {/*<div className="aspect-video bg-muted rounded-t-lg bg-[url('/three-faith-prayer-unity.png')] bg-cover bg-center"></div>*/}
+                <div
+                  className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
+                  style={{ backgroundImage: `url(${BASE}/three-faith-prayer-unity.png)` }}
+                />  
                 <CardHeader>
                   <Badge variant="secondary" className="w-fit">
                     March 15, 2024
@@ -196,7 +200,13 @@ export default function HomePage() {
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
-                <div className="aspect-video bg-muted rounded-t-lg bg-[url('/interfaith-community-cooperation.png')] bg-cover bg-center"></div>
+                {/*<div className="aspect-video bg-muted rounded-t-lg bg-[url('/interfaith-community-cooperation.png')] bg-cover bg-center"></div>*/}
+                
+                <div
+                  className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
+                  style={{ backgroundImage: `url(${BASE}/interfaith-community-cooperation.png)` }}
+                  />
+                
                 <CardHeader>
                   <Badge variant="secondary" className="w-fit">
                     March 10, 2024
