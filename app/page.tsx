@@ -7,14 +7,9 @@ import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } fr
 import Image from "next/image";
 
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-/*
-"scripts": { "build": "next build", "dev": "next dev", "lint": "next lint", "start": "next start" },
-
-
-
-*/
+const IS_PRODUCTION = false;
+const BASE = IS_PRODUCTION ? "/one-god" : "";
 
 
 export default function HomePage() {
@@ -64,7 +59,7 @@ export default function HomePage() {
        */}
         <Image
           // src="one-god/rabbie.png"
-          src="/one-god/rabbie.png"
+          src={`${BASE}/rabbie.png`}
           alt="Background"
           fill   // makes it cover the section
           className="object-cover opacity-50" // cover + opacity
@@ -219,7 +214,13 @@ export default function HomePage() {
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
-                <div className="aspect-video bg-muted rounded-t-lg bg-[url('/diverse-youth-leadership.png')] bg-cover bg-center"></div>
+                {/*  <div className="aspect-video bg-muted rounded-t-lg bg-[url('/one-god/diverse-youth-leadership.png')] bg-cover bg-center"></div>*/}
+
+               <div
+                  className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
+                  style={{ backgroundImage: `url(${BASE}/diverse-youth-leadership.png)` }}
+                />
+
                 <CardHeader>
                   <Badge variant="secondary" className="w-fit">
                     March 5, 2024
