@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } from "lucide-react"
+import Image from "next/image";
 
 /*
 "scripts": { "build": "next build", "dev": "next dev", "lint": "next lint", "start": "next start" },
@@ -56,9 +57,21 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/10">
       {/*
+      <div className="absolute inset-0 bg-[url('/rabbie.png')] bg-cover bg-center opacity-45"></div>
        */}
+        <Image
+          src="/rabbie.png"
+          alt="Background"
+          fill   // makes it cover the section
+          className="object-cover opacity-50" // cover + opacity
+          priority
+        />
+        
 
-       <div className="absolute inset-0 bg-[url('/rabbie.png')] bg-cover bg-center opacity-45"></div>
+
+
+
+
         <div className="relative container py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <Badge variant="secondary" className="text-sm font-medium px-4 py-2">
