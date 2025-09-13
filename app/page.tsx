@@ -6,6 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } from "lucide-react"
 import Image from "next/image";
 
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 /*
 "scripts": { "build": "next build", "dev": "next dev", "lint": "next lint", "start": "next start" },
 
@@ -60,18 +63,13 @@ export default function HomePage() {
       <div className="absolute inset-0 bg-[url('/rabbie.png')] bg-cover bg-center opacity-45"></div>
        */}
         <Image
-          src="/rabbie.png"
+          src="one-god/rabbie.png"
           alt="Background"
           fill   // makes it cover the section
           className="object-cover opacity-50" // cover + opacity
           priority
         />
         
-
-
-
-
-
         <div className="relative container py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <Badge variant="secondary" className="text-sm font-medium px-4 py-2">
