@@ -8,7 +8,7 @@ import Image from "next/image";
 
 
 
-const IS_PRODUCTION = false;
+const IS_PRODUCTION = true;
 const BASE = IS_PRODUCTION ? "/one-god" : "";
 
 
