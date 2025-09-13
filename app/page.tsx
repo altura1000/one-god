@@ -63,7 +63,8 @@ export default function HomePage() {
       <div className="absolute inset-0 bg-[url('/rabbie.png')] bg-cover bg-center opacity-45"></div>
        */}
         <Image
-          src="one-god/rabbie.png"
+          // src="one-god/rabbie.png"
+          src="/one-god/rabbie.png"
           alt="Background"
           fill   // makes it cover the section
           className="object-cover opacity-50" // cover + opacity
