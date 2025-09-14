@@ -181,20 +181,19 @@ export default function HomePage() {
                 {/*<div className="aspect-video bg-muted rounded-t-lg bg-[url('/three-faith-prayer-unity.png')] bg-cover bg-center"></div>*/}
                 <div
                   className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${BASE}/three-faith-prayer-unity.png)` }}
+                  style={{ backgroundImage: `url(${BASE}/america.png)` }}
                 />  
                 <CardHeader>
                   <Badge variant="secondary" className="w-fit">
                     March 15, 2024
                   </Badge>
                   <CardTitle className="text-lg leading-tight">
-                    Interfaith Prayer Gathering Unites Three Abrahamic Faiths
+                    America at a Crossroads
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
-                    Jewish and Christian leaders join together in prayer for peace and protection against
-                    rising antisemitism, Islamophobia, and religious persecution worldwide.
+                    Polarization is tearing at our shared story. See how One God is rebuilding unity around liberty, justice, and shared responsibility.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -204,7 +203,7 @@ export default function HomePage() {
                 
                 <div
                   className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${BASE}/interfaith-community-cooperation.png)` }}
+                  style={{ backgroundImage: `url(${BASE}/australia.png)` }}
                   />
                 
                 <CardHeader>
@@ -212,13 +211,12 @@ export default function HomePage() {
                     March 10, 2024
                   </Badge>
                   <CardTitle className="text-lg leading-tight">
-                    Synagogue-Church-Mosque Partnerships Strengthen Communities
+                    Unity in Australia: Jews & Christians Stand Together
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
-                    Local Jewish and Christian congregations collaborate on security measures and mutual
-                    support programs to protect against extremist threats and build lasting friendships.
+                    Interfaith partnerships are strengthening Australia’s democratic identity and community safety in the face of rising extremism and hate.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -228,7 +226,7 @@ export default function HomePage() {
 
                <div
                   className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${BASE}/diverse-youth-leadership.png)` }}
+                  style={{ backgroundImage: `url(${BASE}/europe.png)` }}
                 />
 
                 <CardHeader>
@@ -261,7 +259,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-12">
               <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-primary/50">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -299,6 +297,8 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
+
+            {/*
               <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-secondary/50">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
@@ -318,6 +318,8 @@ export default function HomePage() {
                   </Button>
                 </CardContent>
               </Card>
+              */}
+
             </div>
           </div>
         </div>
