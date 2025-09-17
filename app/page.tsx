@@ -5,12 +5,10 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } from "lucide-react"
 import Image from "next/image";
+import Cards from "./Articles";
 
-
-
-const IS_PRODUCTION = true;
+const IS_PRODUCTION = false;
 const BASE = IS_PRODUCTION ? "/one-god" : "";
-
 
 export default function HomePage() {
   return (
@@ -176,73 +174,9 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                {/*<div className="aspect-video bg-muted rounded-t-lg bg-[url('/three-faith-prayer-unity.png')] bg-cover bg-center"></div>*/}
-                <div
-                  className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${BASE}/america.png)` }}
-                />  
-                <CardHeader>
-                  <Badge variant="secondary" className="w-fit">
-                    March 15, 2024
-                  </Badge>
-                  <CardTitle className="text-lg leading-tight">
-                    America at a Crossroads
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="leading-relaxed">
-                    Polarization is tearing at our shared story. See how One God is rebuilding unity around liberty, justice, and shared responsibility.
-                  </CardDescription>
-                </CardContent>
-              </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
-                {/*<div className="aspect-video bg-muted rounded-t-lg bg-[url('/interfaith-community-cooperation.png')] bg-cover bg-center"></div>*/}
-                
-                <div
-                  className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${BASE}/australia.png)` }}
-                  />
-                
-                <CardHeader>
-                  <Badge variant="secondary" className="w-fit">
-                    March 10, 2024
-                  </Badge>
-                  <CardTitle className="text-lg leading-tight">
-                    Unity in Australia: Jews & Christians Stand Together
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="leading-relaxed">
-                    Interfaith partnerships are strengthening Australia’s democratic identity and community safety in the face of rising extremism and hate.
-                  </CardDescription>
-                </CardContent>
-              </Card>
+             <Cards BASE = {BASE} />
 
-              <Card className="hover:shadow-lg transition-shadow">
-                {/*  <div className="aspect-video bg-muted rounded-t-lg bg-[url('/one-god/diverse-youth-leadership.png')] bg-cover bg-center"></div>*/}
-
-               <div
-                  className="aspect-video bg-muted rounded-t-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${BASE}/europe.png)` }}
-                />
-
-                <CardHeader>
-                  <Badge variant="secondary" className="w-fit">
-                    March 5, 2024
-                  </Badge>
-                  <CardTitle className="text-lg leading-tight">Abrahamic Youth Leadership Summit Launches</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="leading-relaxed">
-                    Young Jewish and Christian leaders unite to combat hate speech and build bridges between
-                    communities in 12 countries, emphasizing our shared heritage under One God.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
