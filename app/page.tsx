@@ -7,7 +7,7 @@ import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } fr
 import Image from "next/image";
 import Cards from "./Articles";
 
-const IS_PRODUCTION = false;
+const IS_PRODUCTION = true;
 const BASE = IS_PRODUCTION ? "/one-god" : "";
 
 export default function HomePage() {
