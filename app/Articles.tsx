@@ -17,31 +17,31 @@ type Article = {
 export const articles: Article[] = [
   {
     id: 1,
-    title: 'America at a Crossroads',
-    date: 'March 15, 2024',
+    title: 'One God: Uniting Jews and Christians to Strengthen America',
+    date: 'September 11, 2025',
     image: '',
     excerpt:
-      'Polarization is tearing at our shared story. See how One God is rebuilding unity around liberty, justice, and shared responsibility.',
+      'One God links churches and synagogues to resist extremists. We run joint service, study circles, and quick-response trainings to replace fear with facts. Support us to fund local programs that keep communities safe and free.',
     content:
-      'One-God is a civic, faith-driven organization preparing its next chapter in the United States. Our plan is simple and urgent: connect Jewish and Christian neighbors, city by city, to counter the extremist fringe that threatens America’s liberal, open society. We stand for the Constitution and the Bill of Rights, for town halls and school boards where debate stays civil, for Main Street and the open road, for the First Amendment pulpit and the college seminar room, for ballparks, jazz clubs, national parks, and startup garages under the same stars and stripes. In the coming year, One-God will launch local alliances, shared service projects, and learning circles that teach respect across traditions. We will train community guardians to de-escalate hate, partner with synagogues and churches, and support educators and police in lawful, rights-respecting responses. Our promise is practical hope: when Americans bridge faith lines, extremism loses oxygen. The free world needs an America that is confident, plural and united; this is how we help build it—together, under one God; we honor many U.S. identities—rural and urban, all.',
+      'One God is a grassroots, non-partisan initiative that brings Jewish and Christian communities together across the United States to push back against extremists who try to fracture our neighborhoods and undermine our democratic norms. We believe America’s strength is built on covenant: the promise that every person carries dignity, and that freedom is safeguarded by responsibility.From church basements to synagogue social halls, from small-town Main Street to big-city boroughs, we host joint service days, interfaith study circles, and rapid-response trainings that teach people how to de-escalate hate, report threats, and replace online rumor with verified facts. Our local “Neighbor Alliances” pair congregations to adopt schools, support first responders, and rebuild trust block by block.We refuse the false choice between faith and pluralism. By standing shoulder to shoulder—pastors and rabbis, youth leaders and retirees—we model a civic friendship that extremists cannot counterfeit. Join us as a monthly donor or volunteer partner, and help protect the American promise for the next generation. Become a supporter to fund training and microgrants that turn solidarity into action.',
   },
   {
     id: 2,
-    title: 'Unity in Australia: Jews & Christians Stand Together',
-    date: 'March 15, 2024',
+    title: 'One God Australia: Harmony Over Extremism',
+    date: 'July 23, 2025',
     image: '',
     excerpt:
-      'Interfaith partnerships are strengthening Australia’s democratic identity and community safety in the face of rising extremism and hate.',
+      'An Australian initiative uniting Jewish and Christian communities to strengthen everyday harmony and blunt extremist narratives; rooted in the spirit of the fair go and mateship, it lifts shared values without entering partisan politics.',
     content:
-      'Communities are building coalitions that actively resist hate and extremism.\n\nThis work strengthens democracy and social trust.',
+      'One God is an Australian initiative dedicated to a clear simple idea: Jews and Christians can live in harmony and, together, resist the pull of extremism. Australia’s identity—shaped by the fair go, mateship, and a quiet confidence from the coast to the outback—makes space for difference without fear. In that spirit, One God cultivates neighbourly respect between synagogues and churches, everyday kindness on trams and at footy grounds, and honest conversations that cool anger before it hardens.This is not a political project. It is a cultural promise to keep ordinary life intact: the shared barbecue in the park, the hello on a morning run, the freedom to worship without harassment. By lifting up shared values—dignity, responsibility, truthfulness—we undercut the slogans of those who seek to divide. We do it with listening, learning, and practical cooperation anchored in Australian law and civic norms.When Jewish and Christian Australians recognise each other as partners, extremist voices fade into the background. Harmony is not passive; it is made each day by people who choose decency over derision and facts over fear. That is the Australian way, and it is the heart of One God.',
   },
   {
     id: 3,
-    title: 'complete title',
-    date: 'March 15, 2024',
+    title: 'One God Europe: Everyday Harmony, Not Extremism',
+    date: 'August 28, 2025',
     image: '',
-    excerpt: 'complete europe',
-    content: 'complete europe',
+    excerpt: 'A pan-European initiative nurturing Jewish–Christian neighbourliness to leave extremism with no oxygen; grounded in civic habits—listening, learning, and shared public life—without stepping into partisan politics. It lifts quiet cooperation as Europe’s enduring strength.',
+    content: 'One God in Europe starts with a modest conviction: Jewish and Christian neighbours can nurture everyday harmony and leave extremism with no oxygen. The continent’s identity—shaped by cathedrals and synagogues, town squares and tramlines—shows that difference can live side by side without fear. From Lisbon to Lviv, Stockholm to Sicily, we lift what Europeans already do well: greet a stranger, argue fairly, protect the dignity of worship, and keep facts above slogans. This is not a party platform. It is a civic habit: listening across traditions, learning shared ethics, and meeting as equals where real life happens—markets, schools, cafés, clinics. We highlight trusted history and media literacy so rumours cool before they burn. We prefer quiet cooperation to spectacle. When people recognise the humanity across a pew or a prayer hall, the noise of agitators fades. Harmony is practical: a festival that welcomes all, a volunteer shift after a storm, a calm response on a crowded train. One God points to these ordinary choices and says: this is Europe at its best—plural, lawful, confident. We model steadiness over rage and neighbourliness over suspicion, keeping a shared home open to all',
   },
 ];
 

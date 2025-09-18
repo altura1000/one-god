@@ -17,8 +17,16 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">Unity Alliance</span>
+          {/* <Shield className="h-8 w-8 text-primary" /> */ }
+             <Image
+              src = {`${BASE}/logo.png`}
+              alt="One God logo"
+              width={32}           // 32px = Tailwind h-8/w-8
+              height={32}
+              className="h-25 w-25"  // אפשר גם לשלוט דרך Tailwind
+            />
+           {/* <span className="text-xl font-bold text-foreground">One God</span> */}
+            <span className="text-xl font-bold text-green-600">One God</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <a
@@ -363,8 +371,10 @@ export default function HomePage() {
             <div className="grid md:grid-cols-4 gap-8">
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">
-                  <Shield className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-lg">Unity Alliance</span>
+                  
+                  {/*<Shield className="h-6 w-6 text-primary" />*/}
+                  
+                  <span className="font-bold text-lg text-green-600">One God</span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Jews and Christians united under One God, defending our shared heritage of freedom,
@@ -437,7 +447,7 @@ export default function HomePage() {
 
             <div className="border-t mt-8 pt-8 text-center">
               <p className="text-sm text-muted-foreground">
-                © 2024 Unity Alliance. All rights reserved. One God, one purpose, united since 2025.
+                © All rights reserved. One God, one purpose, united since 2025.
               </p>
             </div>
           </div>
