@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
+//git push origin main
+
 export default function Support() {
   const [amount, setAmount] = useState("");
   // const clientId = process.env.PUBLIC_PAYPAL_ENV === "sandbox" ?
@@ -8,8 +10,8 @@ export default function Support() {
   //                  process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID_PRODUCTION;
 
 
-  const IS_PRODUCTION = false;
-  
+  const IS_PRODUCTION = true;
+
   let clientId = "";
   if(!IS_PRODUCTION) {
     clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!;

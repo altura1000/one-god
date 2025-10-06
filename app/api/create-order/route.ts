@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
 
   ///////////////// CHANGE LATER ///////////////////////
-  const IS_PRODUCTION = false;
+  const IS_PRODUCTION = true;
 
   try {
     const body = await req.json();
