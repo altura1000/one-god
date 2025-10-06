@@ -3,7 +3,26 @@ import { useEffect, useState } from "react";
 
 export default function Support() {
   const [amount, setAmount] = useState("");
-  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
+  // const clientId = process.env.PUBLIC_PAYPAL_ENV === "sandbox" ?
+  //                  process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID : 
+  //                  process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID_PRODUCTION;
+
+
+  const IS_PRODUCTION = false;
+  
+  let clientId = "";
+  if(!IS_PRODUCTION) {
+    clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!;
+    console.log("sandbox");
+  } else {
+      console.log("production");
+     clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID_PRODUCTION!;
+  }
+
+
+  console.log(process.env.PUBLIC_PAYPAL_ENV);
+
+
   const presetAmounts = [1, 5, 10, 15, 20];
 
   useEffect(() => {
@@ -20,24 +39,35 @@ export default function Support() {
           shape: "rect",
           label: "paypal",
         },
-        // ✅ Ask your server to create the order
+
         createOrder: async () => {
+          if (!amount || Number(amount) < 1) {
+            alert("Please enter a valid amount (min $1)");
+            throw new Error("Invalid amount");
+          }
+
           const res = await fetch("/api/create-order", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ amount: amount || "1.00" }),
+            body: JSON.stringify({ amount }),
           });
 
           const data = await res.json();
-          console.log("Order created:", data);
+          if (!res.ok) {
+            alert(data.error || "Something went wrong.");
+            throw new Error(data.error);
+          }
 
-          return data.id; // PayPal expects order ID here
+          return data.id;
         },
-        // ✅ Capture via PayPal SDK
-        onApprove: async (data, actions) => {
-          const details = await actions.order.capture();
-          alert("Thanks, " + details.payer.name.given_name + "!");
-        },
+        
+
+      onApprove: async (data: any, actions: any) => {
+        window.location.href = `/payment-success`;
+      },
+
+
+
       }).render("#paypal-buttons");
     }
 
