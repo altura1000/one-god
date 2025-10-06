@@ -15,14 +15,9 @@ export default function Support() {
   let clientId = "";
   if(!IS_PRODUCTION) {
     clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!;
-    console.log("sandbox");
   } else {
-      console.log("production");
      clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID_PRODUCTION!;
   }
-
-
-  console.log(process.env.PUBLIC_PAYPAL_ENV);
 
 
   const presetAmounts = [1, 5, 10, 15, 20];
@@ -62,14 +57,24 @@ export default function Support() {
 
           return data.id;
         },
-        
 
       onApprove: async (data: any, actions: any) => {
-        window.location.href = `/payment-success`;
+        // ✅ Call your backend to capture securely
+        const res = await fetch("/api/capture-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ orderID: data.orderID }),
+        });
+
+        const details = await res.json();
+
+        if (details.status === "COMPLETED") {
+          window.location.href = `/payment-success`;
+        } else {
+          // console.log(details);
+          alert("Payment not completed. Please try again.");
+        }
       },
-
-
-
       }).render("#paypal-buttons");
     }
 
