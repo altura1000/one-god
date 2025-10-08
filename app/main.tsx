@@ -16,8 +16,6 @@ export default function Main() {
   return (
     <div className="min-h-screen bg-background">
 
-      
-
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
@@ -61,7 +59,7 @@ export default function Main() {
           </nav>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
             <Link href="/support" target="_blank" rel="noopener noreferrer">
-              Support Now
+              Support
             </Link>
           </Button>
         </div>
@@ -223,17 +221,18 @@ export default function Main() {
                     Fund critical operations, humanitarian aid, and advocacy campaigns worldwide.
                   </CardDescription>
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Make a Donation
+                    <Link href="/support" target="_blank" rel="noopener noreferrer">
+                      Make a Support
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
-
               <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-accent/50">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                     <Users className="h-8 w-8 text-accent" />
                   </div>
-                  <CardTitle className="text-xl">Volunteer</CardTitle>
+                  <CardTitle className="text-xl">Join Us</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <CardDescription className="text-base leading-relaxed">
@@ -447,7 +446,9 @@ export default function Main() {
                 <h4 className="font-semibold">Support Our Cause</h4>
                 <div className="space-y-3">
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Support Today
+                    <Link href="/support" target="_blank" rel="noopener noreferrer">
+                      Support Today
+                    </Link>
                   </Button>
                   <p className="text-xs text-muted-foreground">Your contribution helps us defend freedom worldwide.</p>
                 </div>

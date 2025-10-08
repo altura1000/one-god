@@ -5,9 +5,12 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'One God',
+  description: 'Jews and Christians united under One God, defending our shared heritage of freedom, democracy, and human dignity against all forms of extremism.',
+  // generator: 'v0.app',
+  icons: {
+    icon: '/logo.png',
+  },
 }
 
 export default function RootLayout({
