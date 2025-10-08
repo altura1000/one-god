@@ -49,10 +49,13 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'One God',
-  description: 'Jews and Christians united under One God...',
+  description: 'Jews and Christians united under One God — defending freedom, democracy, and human dignity together.',
+  icons: {
+    icon: '/logo.png',
+  },
   openGraph: {
     title: 'One God',
-    description: 'Jews and Christians united under One God...',
+    description: 'Jews and Christians united under One God — defending freedom, democracy, and human dignity together.',
     url: 'https://cheery-sunshine-8e8841.netlify.app',
     siteName: 'One God',
     images: [
