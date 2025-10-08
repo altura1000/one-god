@@ -12,7 +12,7 @@ import './globals.css'
     icon: '/logo.png',
   },
 }*/
-export const metadata: Metadata = {
+/*export const metadata: Metadata = {
   title: 'One God',
   description:
     'Jews and Christians united under One God, defending our shared heritage of freedom, democracy, and human dignity against all forms of extremism.',
@@ -42,6 +42,28 @@ export const metadata: Metadata = {
     description:
       'Jews and Christians united under One God, defending our shared heritage of freedom, democracy, and human dignity against all forms of extremism.',
     images: ['https://cheery-sunshine-8e8841.netlify.app/logo.png'],
+  },
+}*/
+
+
+
+export const metadata: Metadata = {
+  title: 'One God',
+  description: 'Jews and Christians united under One God...',
+  openGraph: {
+    title: 'One God',
+    description: 'Jews and Christians united under One God...',
+    url: 'https://cheery-sunshine-8e8841.netlify.app',
+    siteName: 'One God',
+    images: [
+      {
+        url: 'https://cheery-sunshine-8e8841.netlify.app/logo-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'One God logo',
+      },
+    ],
+    type: 'website',
   },
 }
 
