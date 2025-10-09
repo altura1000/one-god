@@ -68,10 +68,10 @@ export default function Main() {
       <section className="relative bg-gradient-to-br from-background via-muted/30 to-accent/10">
         <Image
           // src="one-god/rabbie.png"
-          src={`${BASE}/test.png`}
+          src={`${BASE}/rabbie.png`}
           alt="Background"
           fill   // makes it cover the section
-          className="opacity-50" // object-cover cover + opacity
+          className="object-cover opacity-50" // object-cover cover + opacity
           priority
         />
         
