@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 
 //git push origin main
+// go daddy
 
 export default function Support() {
   const [amount, setAmount] = useState("");

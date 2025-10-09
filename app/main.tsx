@@ -20,15 +20,13 @@ export default function Main() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center space-x-2">
-          {/* <Shield className="h-8 w-8 text-primary" /> */ }
              <Image
               src = {`${BASE}/logo.png`}
               alt="One God logo"
-              width={32}           // 32px = Tailwind h-8/w-8
+              width={32}          
               height={32}
               className="h-25 w-25"  // אפשר גם לשלוט דרך Tailwind
             />
-           {/* <span className="text-xl font-bold text-foreground">One God</span> */}
             <span className="text-xl font-bold text-green-600">One God</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
@@ -66,10 +64,8 @@ export default function Main() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/10">
-      {/*
-      <div className="absolute inset-0 bg-[url('/rabbie.png')] bg-cover bg-center opacity-45"></div>
-       */}
+      {/*<section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/10">*/}
+      <section className="relative bg-gradient-to-br from-background via-muted/30 to-accent/10">
         <Image
           // src="one-god/rabbie.png"
           src={`${BASE}/rabbie.png`}
@@ -79,8 +75,11 @@ export default function Main() {
           priority
         />
         
-        <div className="relative container py-24 md:py-32">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="relative flex items-center justify-center min-h-screen bg-cover bg-cente">
+
+          
+
+          <div className="max-w-4xl mx-auto text-center space-y-8 ">
             <Badge variant="secondary" className="text-sm font-medium px-4 py-2">
               One God, One Purpose, United Since 2025
             </Badge>
@@ -115,7 +114,7 @@ export default function Main() {
       </section>
 
       {/* Mission Section */}
-      <section id="mission" className="py-20 bg-muted/30">
+      <section id="mission" className="py-20 bg-muted/30 relative flex items-center justify-center">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -177,8 +176,8 @@ export default function Main() {
         </div>
       </section>
 
-      {/* News Section */}
-      <section id="news" className="py-20">
+      {/* News Section - relative flex items-center justify-center min-h-screen bg-cover bg-center */}
+      <section id="news" className="py-20 relative flex items-center justify-center">
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -197,7 +196,7 @@ export default function Main() {
       </section>
 
       {/* Join Us Section */}
-      <section id="join" className="py-20 bg-primary/5">
+      <section id="join" className="py-20 bg-primary/5 relative flex items-center justify-center">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-6">
@@ -208,7 +207,7 @@ export default function Main() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-12 ">
               <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-primary/50">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -276,7 +275,7 @@ export default function Main() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 relative flex items-center justify-center">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -296,22 +295,14 @@ export default function Main() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Email Us</h3>
-                      <p className="text-muted-foreground">contact@unityalliance.org</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                      <MessageCircle className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">WhatsApp</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">one-god@gmail.com</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 bg-muted/50 rounded-lg">
+                  
+                  {/*
                   <h3 className="font-semibold text-lg mb-3">Community Safety Hotline</h3>
                   <p className="text-muted-foreground mb-4">
                     If your synagogue or church community is facing threats or harassment, contact our 24/7
@@ -323,13 +314,17 @@ export default function Main() {
                   >
                     Emergency Support
                   </Button>
+
+                  */}
+
+
                 </div>
               </div>
 
               <Card>
                 <CardHeader>
                   <CardTitle>Send us a Message</CardTitle>
-                  <CardDescription>We'll get back to you within 24 hours.</CardDescription>
+                  <CardDescription>We'll get back to you as soon as possible.</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
@@ -373,7 +368,7 @@ export default function Main() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-muted/30 border-t py-12">
+      <footer className="bg-muted/30 border-t py-12 relative flex items-center justify-center">
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8">
@@ -418,28 +413,9 @@ export default function Main() {
 
               <div className="space-y-4">
                 <h4 className="font-semibold">Resources</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                      Annual Reports
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                      Policy Papers
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                      Educational Materials
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                      Press Kit
-                    </a>
-                  </li>
-                </ul>
+                  <Link href="/policy" target="_blank" rel="noopener noreferrer">
+                    Policy
+                  </Link>
               </div>
 
               <div className="space-y-4">
