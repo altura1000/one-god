@@ -1,10 +1,8 @@
 'use client';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } from "lucide-react"
+import { Heart, Shield, Users, Globe, Mail, ArrowRight } from "lucide-react"
 import Image from "next/image";
 import Cards from "./Articles";
 
