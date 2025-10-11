@@ -62,7 +62,7 @@ Your support is deeply appreciated and helps expand the project’s positive imp
           <p className="mt-2 font-medium text-foreground">
             One God Alliance  
             <br />
-            📧 one-god@gmail.com
+            📧 unitedonegod@gmail.com
             <br />
             🌐 https://one-god.co/
           </p>

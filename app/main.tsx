@@ -8,6 +8,8 @@ import { Heart, Shield, Users, Globe, Mail, MessageCircle, ArrowRight, Star } fr
 import Image from "next/image";
 import Cards from "./Articles";
 
+import ContactForm from "./contactForm";
+
 import Link from "next/link";
 
 const IS_PRODUCTION = false;
@@ -303,7 +305,7 @@ export default function Main() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Email Us</h3>
-                      <p className="text-muted-foreground">one-god@gmail.com</p>
+                      <p className="text-muted-foreground">unitedonegod@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -329,6 +331,9 @@ export default function Main() {
                 </div>
               </div>
 
+              <ContactForm/>
+
+              {/*
               <Card>
                 <CardHeader>
                   <CardTitle>Send us a Message</CardTitle>
@@ -369,7 +374,10 @@ export default function Main() {
                     Send Message
                   </Button>
                 </CardContent>
+
               </Card>
+
+              */}
             </div>
           </div>
         </div>
