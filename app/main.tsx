@@ -1,3 +1,4 @@
+'use client';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -12,7 +13,33 @@ import Link from "next/link";
 const IS_PRODUCTION = false;
 const BASE = IS_PRODUCTION ? "/one-god" : "";
 
+// onClick={() => handleScroll("mission")}
+
 export default function Main() {
+  const handleScroll = (id : string) => {
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  const targetY = target.getBoundingClientRect().top + window.scrollY;
+  const startY = window.scrollY;
+  const duration = 1000; // 1 second
+  const startTime = performance.now();
+
+  const easeInOutQuad = (t : any) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+  const animate = (currentTime : any) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeInOutQuad(progress);
+    window.scrollTo(0, startY + (targetY - startY) * eased);
+    if (elapsed < duration) requestAnimationFrame(animate);
+  };
+
+  requestAnimationFrame(animate);
+};
+
+
+
   return (
     <div className="min-h-screen bg-background">
 
@@ -97,11 +124,15 @@ export default function Main() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 text-lg"
+                onClick={() => handleScroll("contact")}
+                // contact
               >
                 Join Our Alliance
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
+                </Button>
+
+                <Button
+                onClick={() => handleScroll("mission")}
                 size="lg"
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg bg-transparent"
@@ -240,35 +271,12 @@ export default function Main() {
                   <Button
                     variant="outline"
                     className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                    onClick={() => handleScroll("contact")}
                   >
                     Get Involved
                   </Button>
                 </CardContent>
               </Card>
-
-
-            {/*
-              <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-secondary/50">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
-                    <Star className="h-8 w-8 text-secondary" />
-                  </div>
-                  <CardTitle className="text-xl">Advocate</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-base leading-relaxed">
-                    Amplify our message through social media, events, and community outreach.
-                  </CardDescription>
-                  <Button
-                    variant="outline"
-                    className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
-                  >
-                    Spread the Word
-                  </Button>
-                </CardContent>
-              </Card>
-              */}
-
             </div>
           </div>
         </div>
