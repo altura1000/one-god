@@ -74,8 +74,8 @@ export default function ContactForm() {
               <label htmlFor="firstName" className="text-sm font-medium">First Name</label>
               <Input
                 id="firstName"
-                placeholder="John"
                 value={firstName}
+                className="border-2 border-primary focus:border-primary focus:ring-0 rounded-md"
                 onChange={(e) => setFirstName(e.target.value)}
               />
               {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
@@ -84,7 +84,7 @@ export default function ContactForm() {
               <label htmlFor="lastName" className="text-sm font-medium">Last Name</label>
               <Input
                 id="lastName"
-                placeholder="Doe"
+                className="border-2 border-primary focus:border-primary focus:ring-0 rounded-md"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
@@ -97,8 +97,8 @@ export default function ContactForm() {
             <Input
               id="email"
               type="email"
-              placeholder="john@example.com"
               value={email}
+              className="border-2 border-primary focus:border-primary focus:ring-0 rounded-md"
               onChange={(e) => setEmail(e.target.value)}
             />
             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -109,7 +109,8 @@ export default function ContactForm() {
             <Textarea
               id="message"
               placeholder="Tell us how you'd like to get involved..."
-              className="min-h-[120px]"
+              
+              className="min-h-[120px] border-2 border-primary focus:border-primary focus:ring-0 rounded-md"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />

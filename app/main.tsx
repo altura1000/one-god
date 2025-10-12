@@ -331,51 +331,7 @@ export default function Main() {
 
               <ContactForm/>
 
-              {/*
-              <Card>
-                <CardHeader>
-                  <CardTitle>Send us a Message</CardTitle>
-                  <CardDescription>We'll get back to you as soon as possible.</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="firstName" className="text-sm font-medium">
-                        First Name
-                      </label>
-                      <Input id="firstName" placeholder="John" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="lastName" className="text-sm font-medium">
-                        Last Name
-                      </label>
-                      <Input id="lastName" placeholder="Doe" />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <Input id="email" type="email" placeholder="john@example.com" />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us how you'd like to get involved..."
-                      className="min-h-[120px]"
-                    />
-                  </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Send Message
-                  </Button>
-                </CardContent>
-
-              </Card>
-
-              */}
+             
             </div>
           </div>
         </div>
