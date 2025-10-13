@@ -161,14 +161,21 @@ export default function Main() {
               <Card className="border-2 hover:border-primary/50 transition-colors">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <Shield className="h-8 w-8 text-primary" />
+                    {/* <Shield className="h-8 w-8 text-primary" /> --primary: oklch(0.55 0.15 160); */}
+                  <Image
+                    src="/wakeup.png"
+                    alt="Wake Up Icon"
+                    width={62}  // מתאם ל-h-8 (8*4px ב-Tailwind)
+                    height={62} // מתאם ל-w-8
+                    className="text-primary" // אם רוצים צבע כמו אייקון הקודם (יכול להיות שלא ישפיע על תמונה רגילה)
+                  />
+                  
                   </div>
                   <CardTitle className="text-xl">Defending All Faith Communities</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-base leading-relaxed">
-                    Protecting synagogues and churches from extremist attacks while safeguarding our
-                    fundamental right to worship the One God freely and safely.
+                    Protesting against attacks on synagogues and churches from extremists, while advocating for the right to worship the One God freely and safely.
                   </CardDescription>
                 </CardContent>
               </Card>

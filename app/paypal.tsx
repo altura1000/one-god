@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-
+import Link from "next/link";
 //git push origin main
 // go daddy
 
@@ -100,6 +100,15 @@ export default function Support() {
         <h1 className="text-3xl font-extrabold text-yellow-600 mb-2">Support Us</h1>
         <p className="text-gray-600 italic mb-6">
           Your support helps us keep creating and growing. 💛
+        </p>
+
+        {/* Link to Support Policy */}
+        <p className="text-sm text-gray-500 mb-6">
+          By contributing, you agree to our{" "}
+
+          <Link href="/policy"  className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">
+            Support Policy
+          </Link>
         </p>
 
         {/* Preset Amount Buttons */}
