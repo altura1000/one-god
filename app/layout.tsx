@@ -2,50 +2,8 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/next'
+import Script from "next/script"
 import './globals.css'
-
-/* export const metadata: Metadata = {
-  title: 'One God',
-  description: 'Jews and Christians united under One God, defending our shared heritage of freedom, democracy, and human dignity against all forms of extremism.',
-  // generator: 'v0.app',
-  icons: {
-    icon: '/logo.png',
-  },
-}*/
-/*export const metadata: Metadata = {
-  title: 'One God',
-  description:
-    'Jews and Christians united under One God, defending our shared heritage of freedom, democracy, and human dignity against all forms of extremism.',
-  icons: {
-    icon: '/logo.png',
-  },
-  openGraph: {
-    title: 'One God',
-    description:
-      'Jews and Christians united under One God, defending our shared heritage of freedom, democracy, and human dignity against all forms of extremism.',
-    url: 'https://cheery-sunshine-8e8841.netlify.app', // ✅ your actual site URL
-    siteName: 'One God',
-    images: [
-      {
-        url: 'https://cheery-sunshine-8e8841.netlify.app/logo.png', // ✅ must be FULL URL!
-        width: 1200,
-        height: 630,
-        alt: 'One God logo',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'One God',
-    description:
-      'Jews and Christians united under One God, defending our shared heritage of freedom, democracy, and human dignity against all forms of extremism.',
-    images: ['https://cheery-sunshine-8e8841.netlify.app/logo.png'],
-  },
-}*/
-
-
 
 export const metadata: Metadata = {
   title: 'One God',
@@ -70,11 +28,6 @@ export const metadata: Metadata = {
   },
 }
 
-
-
-
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -83,6 +36,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+        {/* ✅ Google Analytics Script */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-2WNTDVNYFE`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2WNTDVNYFE', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+        {/* ✅ End Google Analytics Script */}
+
         {children}
         <Analytics />
       </body>
